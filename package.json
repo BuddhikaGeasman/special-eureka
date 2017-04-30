@@ -1,0 +1,16 @@
+{
+  "name": "svg-path",
+  "version": "0.1.0",
+  "description": "svg to path",
+  "main": "index.js",
+  "bin": {
+    "svg-path": "index.js"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors-cli": "^1.0.7",
+    "commander": "^2.9.0"
+  }
+}

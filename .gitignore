@@ -35,3 +35,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+
+# ignore built icons.js file
+icons.js
+
+# DS_Store
+.DS_Store
