@@ -6,7 +6,9 @@
   "bin": {
     "svg-path": "index.js"
   },
-  "scripts": {},
+  "scripts": {
+    "start" : "./index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
