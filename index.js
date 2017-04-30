@@ -18,19 +18,6 @@ const fireXML = (folder, file) => {
   return `xmllint --xpath "string(//*[local-name()='path']/@d)" ${folder}${file} | tr -d ' '`;
 };
 
-const capitalize = word => {
-  const letters = word.split('');
-  const [firstLetter, ...restLetters] = letters;
-  return [firstLetter.toUpperCase(), ...restLetters].join('');
-};
-
-const variablify = filename => {
-  const [filenameWithoutExt, extension] = filename.split('.');
-  const [first, ...rest] = filenameWithoutExt.split('-');
-  const capitalized = rest.map(capitalize);
-  return [first, ...capitalized].join('');
-};
-
 /* read dir and write to file */
 fs.readdir(folder, (err, files)=> {
   svgUtil.startMsg();
@@ -39,7 +26,7 @@ fs.readdir(folder, (err, files)=> {
       if (err) return svgUtil.errMsg(stderr);
 
       svgUtil.msg(file);
-      wstream.write(`const ${variablify(file)} = '${stdout}'; \n\n`);
+      wstream.write(`const ${svgUtil.variablify(file)} = '${stdout}'; \n\n`);
     })
   );
 });
