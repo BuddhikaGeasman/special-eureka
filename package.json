@@ -1,6 +1,6 @@
 {
   "name": "svg-path",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "svg to path",
   "main": "index.js",
   "bin": {
