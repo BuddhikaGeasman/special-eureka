@@ -20,7 +20,7 @@ program
 const folder = path.resolve(`${program.input}`);
 
 /* file to be written */
-const writeFile = path.resolve(`${program.file}`);
+const writeFile = path.resolve(`${program.output}/${program.file}`);
 const wstream = fs.createWriteStream(writeFile);
 
 /* convert to path */
