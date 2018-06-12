@@ -31,7 +31,7 @@ const fireXML = (folder, file) => (
 /* read dir and write to file */
 fs.readdir(folder, (err, files)=> {
   svgUtil.startMsg();
-  files.forEach(
+  files.filter(file => file.endsWith('.svg')).forEach(
     file => exec(fireXML(folder, file), (err, stdout, stderr)=> {
       if (err) return svgUtil.errMsg(stderr);
 
